@@ -6,9 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Webpage : " />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+	<script src="javascripts/jquery.js"></script>
     <title>Webpage</title>
+	<style>
+		#profile
+		{
+			float:left;
+			margin-left: 100px;
+			width: 180px;
+			height: 200px;
+			background-image:url('images/frank.jpg');
+			-webkit-border-radius: 999px;
+			-moz-border-radius: 999px;
+			border-radius: 999px;
+			behavior: url(PIE.htc);
+		}
+		#container
+		{
+			float:left;
+			margin-left: 100px;
+			border-width:2px;
+			border-color:blue;
+		}
+		
+		#skills{
+			float:left;
+			margin-left: 20px;
+			width: 500px;
+			height: 220px;
+			background-color:grey;
+		}
+		
+		#html{
+			position: relative;
+			left: 10px;
+			top: 20px;
+			width: 20px;
+			height: 15px;
+			background-color:yellow;
+		}
+		
+		#css{
+			position: relative;
+			left: 10px;
+			top: 40px;
+			width: 20px;
+			height: 15px;
+			background-color:yellow;
+		}
+		
+		#javascript{
+			position: relative;
+			left: 10px;
+			top: 66px;
+			width: 20px;
+			height: 15px;
+			background-color:yellow;
+		}
+		
+		#php{
+			position: relative;
+			left: 10px;
+			top: 95px;
+			width: 20px;
+			height: 15px;
+			background-color:yellow;
+		}
+		#sql{
+			position: relative;
+			left: 10px;
+			top: 120px;
+			width: 20px;
+			height: 15px;
+			background-color:yellow;
+		}
+	</style>
   </head>
 
   <body>
@@ -16,64 +88,140 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Franktian/webpage">View on GitHub</a>
 
-          <h1 id="project_title">Webpage</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Franktian/webpage/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Franktian/webpage/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+			<h1 id="project_title">Yawen(Frank) Tian</h1>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+			<div id="profile">
+			</div>
+			<div id="container">
+			</div>
+			<div id="skills">
+				<div id="html">HTML</div>
+				<div id="css">CSS</div>
+				<div id="javascript">JavaScript</div>
+				<div id="php">PHP</div>
+				<div id="sql">SQL</div>
+			</div>
+			<div id="paragraph"></div>
       </section>
     </div>
 
     <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Webpage maintained by <a href="https://github.com/Franktian">Franktian</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
 
     
-
+	<script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.7.4.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			stage.draw();
+			writeMessage(canvas, "HTML", 5, 105);
+			writeMessage(canvas, "JavaScript", 235, 105);
+			writeMessage(canvas, "PHP", 135, 25);
+			writeMessage(canvas, "CSS", 175, 225);
+			writeMessage(canvas, "SQL", 65, 225);
+			$("#javascript").animate({width:'440px'}, 1000);
+			$("#php").animate({width:'400px'}, 1000);
+			$("#html").animate({width:'375px'}, 1000);
+			$("#sql").animate({width:'384px'}, 1000);
+			$("#css").animate({width:'330px'}, 1000);
+		});
+		var stage = new Kinetic.Stage({
+			container: 'container',
+			width: 300,
+			height: 250,
+		});
+		
+		var layer = new Kinetic.Layer();
+		var messageLayer = new Kinetic.Layer();
+		var canvas = messageLayer.getCanvas();
+		var background = new Kinetic.Rect({
+			x: 0,
+			y: 0,
+			width: stage.getWidth(),
+			height: stage.getHeight(),
+			stroke: 'black',
+			strokeWidth: 2
+		});
+		var skills = new Kinetic.Polygon({
+			points: [100*Math.cos(Math.PI/10) + 130, -100*Math.sin(Math.PI/10) + 130, 130, 30, 100*Math.cos(Math.PI*9/10) + 130, -100*Math.sin(Math.PI*9/10) + 130,100*Math.cos(Math.PI*13/10) + 130, -100*Math.sin(Math.PI*13/10) + 130, 100*Math.cos(Math.PI*17/10) + 130, -100*Math.sin(Math.PI*17/10) + 130],
+			fill: '#00D2FF',
+			stroke: 'black',
+			strokeWidth: 2
+		});
+		layer.add(skills);
+		var current = new Kinetic.Polygon({
+			points: [88*Math.cos(Math.PI/10) + 130, -88*Math.sin(Math.PI/10) + 130, 130, 50, 75*Math.cos(Math.PI*9/10) + 130, -75*Math.sin(Math.PI*9/10) + 130,77*Math.cos(Math.PI*13/10) + 130, -77*Math.sin(Math.PI*13/10) + 130, 63*Math.cos(Math.PI*17/10) + 130, -63*Math.sin(Math.PI*17/10) + 130],
+			fill: 'yellow',
+			opacity: 0.5,
+			stroke: 'black',
+			strokeWidth: 2
+		});
+		layer.add(current);
+		
+		
+		for (var i = 0; i < 5; i++) {
+			var javascript = new Kinetic.Circle({
+				x: (100 - i*20)*Math.cos(Math.PI*1/10) + 130,
+				y:  -(100 - i*20)*Math.sin(Math.PI*1/10) + 130,
+				radius: 3,
+				fill: 'red'
+			});
+			layer.add(javascript);
+		
+			var php = new Kinetic.Circle({
+				x: (100 - i*20)*Math.cos(Math.PI*5/10) + 130,
+				y:  -(100 - i*20)*Math.sin(Math.PI*5/10) + 130,
+				radius: 3,
+				fill: 'red'
+			});
+			layer.add(php);
+		
+			var html = new Kinetic.Circle({
+				x: (100 - i*20)*Math.cos(Math.PI*9/10) + 130,
+				y:  -(100 - i*20)*Math.sin(Math.PI*9/10) + 130,
+				radius: 3,
+				fill: 'red'
+			});
+			layer.add(html);
+			
+			var sql = new Kinetic.Circle({
+				x: (100 - i*20)*Math.cos(Math.PI*13/10) + 130,
+				y:  -(100 - i*20)*Math.sin(Math.PI*13/10) + 130,
+				radius: 3,
+				fill: 'red'
+			});
+			layer.add(sql);
+			
+			var css = new Kinetic.Circle({
+				x: (100 - i*20)*Math.cos(Math.PI*17/10) + 130,
+				y:  -(100 - i*20)*Math.sin(Math.PI*17/10) + 130,
+				radius: 3,
+				fill: 'red'
+			});
+			layer.add(css);
+			
+			
+		}
+		var center = new Kinetic.Circle({
+			x: 130,
+			y: 130,
+			radius: 5,
+			fill: 'grey'
+		});
+		layer.add(center);
+		stage.add(layer);
+		stage.add(messageLayer);
+		
+		function writeMessage(canvas, message, x, y) {
+			var context = canvas.getContext('2d');
+			context.font = '18pt Calibri';
+			context.fillStyle = 'black';
+			context.fillText(message, x, y);
+		}
+	</script>
   </body>
 </html>
