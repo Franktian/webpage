@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#container
+			{
+				margin-left:20px;
+				width:504px;
+				height:500px;
+				border-style:solid;
+				border-width:2px;
+				border-color:blue;
+			}
+			.balls
+			{
+				float: left;
+				margin-left:25px;
+				margin-top:45px;
+				-webkit-border-radius: 999px;
+				-moz-border-radius: 999px;
+				border-radius: 999px;
+				behavior: url(PIE.htc);
+				width: 25px;
+				height: 25px;
+				background-color:grey;
+				border: 3px solid #000;
+			}
+			.ball
+			{
+				float: left;
+				margin-left:0px;
+				margin-top: -450px;
+				width: 25px;
+				height: 25px;
+				background-color:yellow;
+				-webkit-border-radius: 999px;
+				-moz-border-radius: 999px;
+				border-radius: 999px;
+				behavior: url(PIE.htc);
+			}
+			.columns
+			{
+				float: left;
+				width: 70px;
+				height:500px;
+				border-style:solid;
+				border-width:1px;
+				border-color:blue;
+			}
+		</style>
+		<script src="javascripts/jquery.js"></script>
+	</head>
+	<body>
+		<div id="container">
+		</div>
+		<script>
+			var ballRound = 0;
+			$(document).ready(function() {
+				for (var i = 0; i < 7; i++) {
+					$('#container').append("<div class='columns' id='" + i + "'></div>");
+				}
+
+				for (var j = 0; j < 6; j++) {
+					if (j == 5) {
+						$('.columns').append("<div class='balls' style='background-color:white;' id='" + j +"'></div>");
+						break;
+					}
+					$('.columns').append("<div class='balls' id='" + j + "'></div>");
+				}
+
+				$('.balls').mouseover(function(){
+					switch($(this).css("background-color")) {
+						case "rgb(128, 128, 128)":
+							$(this).css("background-color", "red")
+							break;
+						case "rgb(255, 255, 255)":
+							$(this).css("background-color", "green")
+							break;
+					}
+				});
+
+				$('.balls').mouseout(function(){
+					switch($(this).css("background-color")) {
+						case "rgb(0, 128, 0)":
+							$(this).css("background-color", "white")
+							break;
+						case "rgb(255, 0, 0)":
+							$(this).css("background-color", "grey")
+							break;
+					}
+				});
+
+				$('.balls').click(function(){
+					if ($(this).css("background-color") == "rgb(0, 128, 0)") {
+						if (ballRound == 0) {
+							$(this).append("<div class='ball' style='background-color:brown'></div>");
+							ballRound = 1;
+						} else {
+							$(this).append("<div class='ball' style='background-color:yellow'></div>");
+							ballRound = 0;
+						}
+						$(this).append("<div class='ball'></div>");
+						$(".ball").animate({marginTop:'0px'}, 1000);
+						var currID = $(this).attr("id");
+						$(this).parents().children('.balls').each(function(){
+							// Loop through the children of the column div
+							if ($(this).attr("id") == currID - 1) {
+								$(this).css("background-color", "white");
+							}
+						});
+						$(this).css("background-color", "grey");
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
